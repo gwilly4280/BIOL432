@@ -1,0 +1,49 @@
+---
+title: "Regex"
+author: "gwilly4280"
+date: "04/02/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Load libraries & Data
+Library:
+```{r, message = F, warning = F}
+library(dplyr)
+```
+
+Data:
+```{r}
+# Load Data
+MData <- read.csv("./measurements.csv")
+# Display summary stats of Data
+summary(MData)
+```
+
+### Regex Data-cleaning
+
+Add new column, and replace Organism in new data-set
+```{r}
+# Create the new data-set
+new_data <- MData %>% 
+   # Replace original Organism column w/ Sp & keep only explicit variables
+   transmute(Sp = sub("(\\w)\\w+", "\\1.", Organism), # Create Sp using Regex
+             Limb.width,
+             Limb.length,
+             Observer,
+             Limb.volume)
+
+# Display the new Data-set
+head(new_data)
+```
+
+### Write to File
+```{r}
+write.csv(new_data, 
+          file = "./MeasShort.csv", # set path
+          row.names = F) # Write to file w/o including row numbers
+```
+

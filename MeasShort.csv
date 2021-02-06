@@ -1,0 +1,15 @@
+"Sp","Limb.width","Limb.length","Observer","Limb.volume"
+"I. scapularis",0.01,0.2,"Victoria X",0.002
+"H. sapiens",3.28,38,"Hans P",124.64
+"H. sapiens",3.2,40,"person",128
+"H. sapiens",3.5,50,"person",175
+"H. sapiens",2.5,35,"person",87.5
+"I. scapularis",0.05,0.01,"person",5e-04
+"I. scapularis",0.03,0.2,"Oliver R.",0.006
+"I. scapularis",0.02,0.03,"person",6e-04
+"c",1,2,"person",2
+"c",1,2,"person",2
+"c",1,2,"person",2
+"c",1,2,"person",2
+"H. sapiens",2,-6,"Oliver R.",-12
+"I. scapularis",4,120,"Oliver R.",480
